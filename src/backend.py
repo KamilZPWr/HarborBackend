@@ -31,7 +31,7 @@ def create_response(core_results, additional_features, additional_features_names
 
         for n in range(len(additional_features_names)):
             parsed_additional_features.append({
-                VALUE: 123.0,  # additional_features.loc[row[0]][additional_features_names[n]],
+                VALUE: 0.5,  # additional_features.loc[row[0]][additional_features_names[n]],
                 NAME: additional_features_names[n]
             })
         row = row[1]
