@@ -37,9 +37,9 @@ def create_response(core_results, additional_features, additional_features_names
         row = row[1]
         results[REAL_ESTATES].append({
             ID: row[0],
-            PRICE: row[1],
+            PRICE: float(row[1]),
             DESC: row[2],
-            SIZE: row[3],
+            SIZE: float(row[3]),
             ROOMS_N: row[4],
             FOTO_URL: row[5],
             LATITUDE: row[6],
