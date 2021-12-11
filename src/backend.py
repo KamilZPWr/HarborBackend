@@ -25,16 +25,16 @@ def read_db():
 
 def create_response(core_results, additional_features, additional_features_names):
     results = {REAL_ESTATES: []}
-
-    for row in core_results.itertuples():
+    print(core_results)
+    for row in core_results.iterrows():
         parsed_additional_features = []
 
         for n in range(len(additional_features_names)):
             parsed_additional_features.append({
-                VALUE: additional_features.iloc[row[0]][additional_features_names[n]],
+                VALUE: additional_features.loc[row[0]][additional_features_names[n]],
                 NAME: additional_features_names[n]
             })
-
+        row = row[1]
         results[REAL_ESTATES].append({
             ID: row[0],
             PRICE: row[1],
