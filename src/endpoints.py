@@ -1,0 +1,28 @@
+# from flask import request, jsonify
+#
+# from app import app
+# from backend import process
+#
+# TEXT = "text"
+# ROOMS_N_MIN = "rooms_n_min"
+# ROOMS_N_MAX = "rooms_n_max"
+# SIZE_MIN = "size_min"
+# SIZE_MAX = "size_max"
+# PRICE_MIN = "price_min"
+# PRICE_MAX = "price_max"
+#
+#
+# @app.route('/real_estates/', methods=['POST'])
+# def tmp():
+#     content = request.json
+#     real_estates = process(
+#         content[TEXT],
+#         content[PRICE_MAX],
+#         content[PRICE_MIN],
+#         content[SIZE_MAX],
+#         content[SIZE_MIN],
+#         content[ROOMS_N_MAX],
+#         content[ROOMS_N_MIN],
+#     )
+#
+#     return jsonify(real_estates)
