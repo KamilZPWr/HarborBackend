@@ -17,7 +17,7 @@ DESC = 'desc'
 PRICE = 'price'
 REAL_ESTATES = 'real_estates'
 
-tmp_data = pd.read_csv('./assets/features_list.csv')
+tmp_data = pd.read_csv('./assets/features_list.csv', sep=';')
 mapper = {row[1]: row[2] for row in tmp_data.itertuples()}
 
 
