@@ -17,6 +17,9 @@ DESC = 'desc'
 PRICE = 'price'
 REAL_ESTATES = 'real_estates'
 
+tmp_data = pd.read_csv('../assets/features_list.csv')
+mapper = {row[1]: row[2] for row in tmp_data.itertuples()}
+
 
 def read_db():
     real_estates = pd.read_csv(DB_PATH, sep=';')
@@ -32,8 +35,9 @@ def create_response(core_results, additional_features, additional_features_names
         for n in range(len(additional_features_names)):
             parsed_additional_features.append({
                 VALUE: 0.5,  # additional_features.loc[row[0]][additional_features_names[n]],
-                NAME: additional_features_names[n]
+                NAME: mapper[additional_features_names[n]]
             })
+
         row = row[1]
         results[REAL_ESTATES].append({
             ID: row[0],
