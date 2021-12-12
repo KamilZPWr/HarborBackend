@@ -1,5 +1,5 @@
 import pandas as pd
-
+import random
 from model import UseEmbedding
 
 DB_PATH = './assets/db.csv'
@@ -34,7 +34,7 @@ def create_response(core_results, additional_features, additional_features_names
 
         for n in range(len(additional_features_names)):
             parsed_additional_features.append({
-                VALUE: 0.5,  # additional_features.loc[row[0]][additional_features_names[n]],
+                VALUE: random.uniform(0, 1),  # additional_features.loc[row[0]][additional_features_names[n]],
                 NAME: mapper[additional_features_names[n]]
             })
 
